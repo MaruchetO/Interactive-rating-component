@@ -22,7 +22,7 @@ function showModal() {
   if (selected) {
     modal.style.display = "flex";
   } else {
-    alert('Please rate us before submit.')
+    alert("Please rate us before submitting.");
   }
 }
 window.onclick = function (event) {
