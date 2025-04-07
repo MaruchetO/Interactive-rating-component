@@ -17,22 +17,25 @@ function turnOffPreviousButton() {
   }
 }
 
-function showModal() {
+buttons.forEach((button) => {
+  button.addEventListener("click", () => {
+    star.innerText = button.value;
+  });
+});
+
+document.querySelector(".submit").addEventListener("click", (event) => {
+  event.preventDefault();
+
   const selected = document.querySelector(".selected");
   if (selected) {
     modal.style.display = "flex";
   } else {
     alert("Please rate us before submitting.");
   }
-}
+});
+
 window.onclick = function (event) {
   if (event.target == modal) {
     modal.style.display = "none";
   }
 };
-
-buttons.forEach((button) => {
-  button.addEventListener("click", () => {
-     star.innerText = button.value;
-  });
-});
